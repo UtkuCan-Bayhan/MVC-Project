@@ -27,6 +27,13 @@ using shopapp.webui.models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 4 "C:\Users\User\Shopapp\shopapp.webui\views\_ViewImports.cshtml"
+using shopapp.webui.Extensions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 5 "C:\Users\User\Shopapp\shopapp.webui\views\_ViewImports.cshtml"
 using Newtonsoft.Json;
 
@@ -34,7 +41,7 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f25162bc67d7d9d9eeb73ffda5a6a931fc48931", @"/views/shared/Components/Categories/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1d4a1ed446793b03f0dd3caa556bce8a07984af8", @"/views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"427eca76298fc45532c0ceea7805dd055d11fb9c", @"/views/_ViewImports.cshtml")]
     public class views_shared_Components_Categories_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Category>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Shop", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -86,7 +93,7 @@ WriteAttributeValue("", 124, ViewBag.SelectedCategory==null?"active":"", 124, 45
 #line hidden
 #nullable disable
             WriteLiteral("        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f25162bc67d7d9d9eeb73ffda5a6a931fc489314860", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f25162bc67d7d9d9eeb73ffda5a6a931fc489315035", async() => {
 #nullable restore
 #line 12 "C:\Users\User\Shopapp\shopapp.webui\views\shared\Components\Categories\Default.cshtml"
                                                                                                                                                                                Write(item.Name);

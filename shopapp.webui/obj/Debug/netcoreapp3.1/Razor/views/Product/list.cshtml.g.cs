@@ -27,6 +27,13 @@ using shopapp.webui.models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 4 "C:\Users\User\Shopapp\shopapp.webui\views\_ViewImports.cshtml"
+using shopapp.webui.Extensions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 5 "C:\Users\User\Shopapp\shopapp.webui\views\_ViewImports.cshtml"
 using Newtonsoft.Json;
 
@@ -34,7 +41,7 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e9d21c511e4c3f3b1e2f281eb69a04b995b158ee", @"/views/Product/list.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1d4a1ed446793b03f0dd3caa556bce8a07984af8", @"/views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"427eca76298fc45532c0ceea7805dd055d11fb9c", @"/views/_ViewImports.cshtml")]
     public class views_Product_list : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ProductListViewModel>
     {
         #pragma warning disable 1998

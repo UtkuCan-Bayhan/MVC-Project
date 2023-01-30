@@ -27,6 +27,13 @@ using shopapp.webui.models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 4 "C:\Users\User\Shopapp\shopapp.webui\views\_ViewImports.cshtml"
+using shopapp.webui.Extensions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 5 "C:\Users\User\Shopapp\shopapp.webui\views\_ViewImports.cshtml"
 using Newtonsoft.Json;
 
@@ -34,7 +41,7 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a67d5c29758570d6f7df21f89d37c907b6ee7ff", @"/views/Admin/categorylist.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1d4a1ed446793b03f0dd3caa556bce8a07984af8", @"/views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"427eca76298fc45532c0ceea7805dd055d11fb9c", @"/views/_ViewImports.cshtml")]
     public class views_Admin_categorylist : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ProductDetailModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "shop", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -94,7 +101,7 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
             WriteLiteral("                <div class=\"row\">\r\n                        <div class=\"col-4\">\r\n                        <h4 > ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a67d5c29758570d6f7df21f89d37c907b6ee7ff6210", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a67d5c29758570d6f7df21f89d37c907b6ee7ff6385", async() => {
 #nullable restore
 #line 21 "C:\Users\User\Shopapp\shopapp.webui\views\Admin\categorylist.cshtml"
                                                                                                                                   Write(item.Name);
@@ -153,7 +160,7 @@ WriteAttributeValue("", 938, item.CategoryId, 938, 16, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral("><button class=\"btn btn-primary btn-sm\">Edit</button></a>\r\n\r\n                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a67d5c29758570d6f7df21f89d37c907b6ee7ff9959", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a67d5c29758570d6f7df21f89d37c907b6ee7ff10134", async() => {
                 WriteLiteral("\r\n                        <input type=\"hidden\" name=\"CategoryId\"");
                 BeginWriteAttribute("value", " value=\"", 1181, "\"", 1205, 1);
 #nullable restore

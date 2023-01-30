@@ -16253,6 +16253,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\User\\Shopapp\\shopapp.webui\\views\\Account\\forgotPassword.cshtml",
+      "TargetPath": "views\\Account\\forgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Shopapp\\shopapp.webui\\views\\Admin\\categorylist.cshtml",
       "TargetPath": "views\\Admin\\categorylist.cshtml",
       "FileKind": "mvc"
@@ -16368,6 +16373,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\User\\Shopapp\\shopapp.webui\\views\\shared\\_ResultMessage.cshtml",
+      "TargetPath": "views\\shared\\_ResultMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Shopapp\\shopapp.webui\\views\\Account\\ConfirmEmail.cshtml",
       "TargetPath": "views\\Account\\ConfirmEmail.cshtml",
       "FileKind": "mvc"
@@ -16380,6 +16390,11 @@
     {
       "FilePath": "c:\\Users\\User\\Shopapp\\shopapp.webui\\views\\Admin\\CreateProduct.cshtml",
       "TargetPath": "views\\Admin\\CreateProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Shopapp\\shopapp.webui\\views\\Account\\ResetPassword.cshtml",
+      "TargetPath": "views\\Account\\ResetPassword.cshtml",
       "FileKind": "mvc"
     },
     {

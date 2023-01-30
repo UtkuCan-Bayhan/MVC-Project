@@ -112,3 +112,6 @@ C:\Users\User\Shopapp\shopapp.webui\bin\Debug\netcoreapp3.1\Microsoft.Extensions
 C:\Users\User\Shopapp\shopapp.webui\obj\Debug\netcoreapp3.1\Razor\views\Account\login.cshtml.g.cs
 C:\Users\User\Shopapp\shopapp.webui\obj\Debug\netcoreapp3.1\Razor\views\Account\register.cshtml.g.cs
 C:\Users\User\Shopapp\shopapp.webui\obj\Debug\netcoreapp3.1\Razor\views\Account\ConfirmEmail.cshtml.g.cs
+C:\Users\User\Shopapp\shopapp.webui\obj\Debug\netcoreapp3.1\Razor\views\Account\forgotPassword.cshtml.g.cs
+C:\Users\User\Shopapp\shopapp.webui\obj\Debug\netcoreapp3.1\Razor\views\Account\ResetPassword.cshtml.g.cs
+C:\Users\User\Shopapp\shopapp.webui\obj\Debug\netcoreapp3.1\Razor\views\shared\_ResultMessage.cshtml.g.cs

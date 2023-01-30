@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using shopapp.webui.EmailServices;
+using shopapp.webui.Extensions;
 using shopapp.webui.identity;
 using shopapp.webui.models;
 
@@ -94,29 +95,115 @@ namespace shopapp.webui.controllers
 
         public async Task<IActionResult> ConfirmEmail(string userId,string token){
             if(userId==null || token ==null){
-                CreateMessage("invalid","danger");
-                return View();
+
+                TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message="invalid token",
+                    AlertType="danger"
+
+                });
+                 return View();
+                
+                // CreateMessage("invalid","danger");
+            
             }
             var user= await _userManager.FindByIdAsync(userId);
             if(user!=null){
                  var result= await _userManager.ConfirmEmailAsync(user,token);
             if(result.Succeeded){
-                CreateMessage("valid","success");
+                
+                TempData.Put("message",new AlertMessage{
+                    Title="valid",
+                    Message="valid token",
+                    AlertType="success"
+
+                });
+                // CreateMessage("valid","success");
                  return View();
             }  
             }
-           CreateMessage("invalid","danger");
+            TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message="invalid token",
+                    AlertType="warning"
+
+                });
+        //    CreateMessage("invalid","danger");
                  return View();
           
 
         }
-        private void CreateMessage(string message,string alertType){
-             TempData["message"]= JsonConvert.SerializeObject (new AlertMessage{
-                Message=message,
-                AlertType=alertType});
 
+        public IActionResult ForgotPassword(){
+            return View();
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> ForgotPassword(string Email){
+            if(string.IsNullOrEmpty(Email)){
+                return View();
+            }
+            var user= await _userManager.FindByEmailAsync(Email);
+
+            if(user==null){
+                return View();
+            }
+
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var url=Url.Action("Reset Password","Account",new {
+                userId=user.Id,
+                token=code
+            });
+
+            await _emailSender.SendEmailAsync(Email,"Reset Password",$"Click <a href='https://localhost:5001{url}'>here</a> to reset password>");
+
+            return View();
 
         }
+
+             public IActionResult ResetPassword(string userId,string token){
+                if (userId==null && token==null){
+                    return RedirectToAction("Home","index");
+                }
+
+                var model= new ResetPasswordModel{
+                    token=token
+                };
+
+                return View();
+
+
+             }
+             [HttpPost]
+             public async Task<IActionResult> ResetPassword(ResetPasswordModel model){
+                if (ModelState.IsValid){
+                    return View(model);
+                }
+
+                var user=await _userManager.FindByEmailAsync(model.Email);
+                if(user==null){
+                    return RedirectToAction("HOME","Index");
+                }
+
+                var result= await _userManager.ResetPasswordAsync(user,model.token,model.Password);
+
+                if(result.Succeeded){
+                     return RedirectToAction("Login","Account");
+
+                }
+
+                return View(model);
+
+                
+             }
+        // private void CreateMessage(string message,string alertType){
+        //      TempData["message"]= JsonConvert.SerializeObject (new AlertMessage{
+        //         Message=message,
+        //         AlertType=alertType});
+
+
+        // }
 
     }
 }

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using shopapp.business.Abstract;
 using shopapp.entity;
+using shopapp.webui.Extensions;
 using shopapp.webui.models;
 
 
@@ -56,12 +57,24 @@ namespace shopapp.webui.controllers
             };
              
             if(_ProductService.Create(entity)){
-                CreateMessage("the product is created","success");
+                // CreateMessage("the product is created","success");
+                TempData.Put("message",new AlertMessage{
+                    Title="created",
+                    Message="The product is created",
+                    AlertType="success"
+
+                });
              
                   return RedirectToAction("productlist");
 
             };
-            CreateMessage(_ProductService.ErrorMessage,"danger");
+            // CreateMessage(_ProductService.ErrorMessage,"danger");
+            TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message=_ProductService.ErrorMessage,
+                    AlertType="danger"
+
+                });
 
            return View(product);
                 
@@ -149,11 +162,23 @@ namespace shopapp.webui.controllers
             _ProductService.Update(entity,categoryIds);
 
             if(_ProductService.Update(entity,categoryIds)){
-                CreateMessage("Update is successful","success");
+                TempData.Put("message",new AlertMessage{
+                    Title="update",
+                    Message="Update is successful",
+                    AlertType="success"
+
+                });
+                // CreateMessage("Update is successful","success");
                  return RedirectToAction("productlist");}
 
                  else{
-                    CreateMessage(_ProductService.ErrorMessage,"danger");
+                    // CreateMessage(_ProductService.ErrorMessage,"danger");
+                    TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message=_ProductService.ErrorMessage,
+                    AlertType="danger"
+
+                });
                       ViewBag.Categories=_categoryService.getAll();
                     return View(model);
             }
@@ -178,11 +203,14 @@ namespace shopapp.webui.controllers
             }
 
 
-           TempData["message"]= JsonConvert.SerializeObject(new AlertMessage{
-            Message="The product is deleted",
-            AlertType="danger"
+          TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message="invalid token",
+                    AlertType="warning"
 
-           }) ;
+                });
+
+           ;
            
              return RedirectToAction("Productlist");
         }
@@ -211,9 +239,12 @@ namespace shopapp.webui.controllers
 
                 _categoryService.Create(Category);
 
-                 TempData["message"]= JsonConvert.SerializeObject (new AlertMessage{
-                Message="The category is created",
-                AlertType="success"});
+                TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message="invalid token",
+                    AlertType="warning"
+
+                });
 
                 return RedirectToAction("categorylist");
 
@@ -283,9 +314,12 @@ namespace shopapp.webui.controllers
 
             _categoryService.Update(entity);
 
-              TempData["message"]= JsonConvert.SerializeObject (new AlertMessage{
-                Message="The category is created",
-                AlertType="success"});
+             TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message="invalid token",
+                    AlertType="warning"
+
+                });
 
             
 
@@ -307,9 +341,12 @@ namespace shopapp.webui.controllers
 
             _categoryService.Delete(_categoryService.getById(categoryId));
 
-             TempData["message"]= JsonConvert.SerializeObject (new AlertMessage{
-                Message="The category is deleted",
-                AlertType="danger"});
+             TempData.Put("message",new AlertMessage{
+                    Title="invalid",
+                    Message="invalid token",
+                    AlertType="warning"
+
+                });
 
             return RedirectToAction("categorylist");
 
@@ -322,13 +359,13 @@ namespace shopapp.webui.controllers
             return Redirect("/admin/category/"+categoryId);
         }
 
-        private void CreateMessage(string message,string alertType){
-             TempData["message"]= JsonConvert.SerializeObject (new AlertMessage{
-                Message=message,
-                AlertType=alertType});
+        // private void CreateMessage(string message,string alertType){
+        //      TempData["message"]= JsonConvert.SerializeObject (new AlertMessage{
+        //         Message=message,
+        //         AlertType=alertType});
 
 
-        }
+        // }
 
 
 
