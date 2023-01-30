@@ -1,0 +1,59 @@
+@model ProductListViewModel
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <a href="/admin/product/create" class="btn btn-primary btn-sm">Add Product</a>
+        <h1>Admin Products</h1>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td style="width: 30px;">Id</td>
+                    <td style="width: 50px;">Name</td>
+                    <td style="width: 50px;">Image</td>
+                    <td style="width: 50px;">Price </td>
+                    <td style="width: 70px;">Approved</td>
+                    <td style="width: 30px;">HomePage</td>
+                    <td style="width: 30px;"></td>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if(Model.Products.Count()>0){
+                            @foreach (var item in Model.Products)
+                        {
+                            <tr>
+                            <td class="text-center" style="vertical-align: middle;">@item.ProductId</td>
+                            <td class="mx-1 px-0 text-center" style="vertical-align: middle;">@item.Name</td>
+                            <td class="text-center" style="vertical-align: middle;" ><img class="rounded mx-auto d-block " src="~/img/@item.ImageUrl" width="120px"></td>
+                            <td class="text-center" style="vertical-align: middle;">@item.Price</td>
+                            <td class="text-center" style="vertical-align: middle;"><i class="fa-solid @(item.IsApproved==true?"fa-check text-success ":"fa-x text-danger")"></i></td>
+                            <td class="text-center" style="vertical-align: middle;"><a href="/">Home Page</a></td>
+
+                            <td class="text-center" style="vertical-align: middle;">
+                            <a href="/admin/product/@item.ProductId"><button class="btn btn-primary btn-sm mr-2 my-2">Edit</button></a>
+                            
+                                    <form action="/admin/deleteproduct" method="POST" style="display: inline;">
+                                        <input type="hidden" name="productId" value="@item.ProductId">
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                            </td>
+                            
+                           
+                        </tr>
+                        }
+                }
+                else{
+                    <div class="alert alert-warning">
+                        <h3>No Product</h3>
+                    </div>
+                }
+
+
+               
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+C:\Users\User\Shopapp\shopapp.entity\bin\Debug\net7.0\shopapp.entity.deps.json
+C:\Users\User\Shopapp\shopapp.entity\bin\Debug\net7.0\shopapp.entity.dll
+C:\Users\User\Shopapp\shopapp.entity\bin\Debug\net7.0\shopapp.entity.pdb
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\shopapp.entity.csproj.AssemblyReference.cache
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\shopapp.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\shopapp.entity.AssemblyInfoInputs.cache
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\shopapp.entity.AssemblyInfo.cs
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\shopapp.entity.csproj.CoreCompileInputs.cache
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\shopapp.entity.dll
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\refint\shopapp.entity.dll
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\shopapp.entity.pdb
+C:\Users\User\Shopapp\shopapp.entity\obj\Debug\net7.0\ref\shopapp.entity.dll
